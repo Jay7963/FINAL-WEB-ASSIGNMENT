@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jayson Kung'u Kiarie - Software Engineering Student & Python Developer">
+    <title>About | Jayson Kung'u Kiarie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/about-styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 dark:bg-gray-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Jayson K.</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="about.html" class="nav-link text-blue-600 dark:text-blue-400">About</a>
+                    <a href="skills.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Skills</a>
+                    <a href="projects.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Projects</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-gray-100 dark:text-blue-400 dark:bg-gray-700">About</a>
+                <a href="skills.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Skills</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Contact</a>
+                <div class="px-3 py-2">
+                    <button id="mobile-theme-toggle" class="flex items-center text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-moon dark:hidden mr-2"></i>
+                        <i class="fas fa-sun hidden dark:block mr-2"></i>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="pt-24 pb-12 page-transition">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    About <span class="gradient-text">Me</span>
+                </h1>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Passionate about technology, driven by curiosity, and committed to creating innovative solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8 mt-10">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg stats-card">
+                        <div class="counter" id="eduCounter">3</div>
+                        <p class="text-gray-600 dark:text-gray-300">Educational Programs</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg stats-card">
+                        <div class="counter" id="certCounter">1</div>
+                        <p class="text-gray-600 dark:text-gray-300">Certifications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Personal Info -->
+                <div class="space-y-8 animate-fade-in delay-1">
+                    <div class="about-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect">
+                        <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                            <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-user text-blue-600 dark:text-blue-400 about-icon"></i>
+                            </div>
+                            Who am I?
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            I'm Jayson Kung'u Kiarie, a passionate software engineering student at Kirinyaga University with a strong focus on Python development and blockchain technology. My journey in tech began with curiosity about how things work, which has evolved into a drive to create innovative solutions.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Currently pursuing dual degrees in Software Engineering and Computer Science, I'm dedicated to mastering both theoretical foundations and practical applications of modern software development.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">Python Developer</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 rounded-full text-sm">Blockchain Enthusiast</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-full text-sm">Problem Solver</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Personal Journey -->
+                    <div class="about-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-2">
+                        <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                            <div class="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-rocket text-indigo-600 dark:text-indigo-400 about-icon"></i>
+                            </div>
+                            My Journey
+                        </h2>
+                        <div class="relative pl-8 border-l-2 border-blue-500 dark:border-blue-400">
+                            <div class="mb-6 relative">
+                                <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-blue-500"></div>
+                                <h3 class="font-bold text-lg">Early Interest in Tech</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">2020</p>
+                                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                                    Started exploring programming concepts and building simple applications with Python.
+                                </p>
+                            </div>
+                            <div class="mb-6 relative">
+                                <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-blue-500"></div>
+                                <h3 class="font-bold text-lg">University Studies</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">2021-Present</p>
+                                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                                    Pursuing dual degrees in Software Engineering and Computer Science, diving deep into advanced concepts.
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute -left-10 top-1 w-4 h-4 rounded-full bg-blue-500"></div>
+                                <h3 class="font-bold text-lg">Current Focus</h3>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm">2023-Present</p>
+                                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                                    Specializing in blockchain development and full-stack web applications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="space-y-8 animate-fade-in delay-3">
+                    <div class="about-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect">
+                        <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                            <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-graduation-cap text-green-600 dark:text-green-400 about-icon"></i>
+                            </div>
+                            Education
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Kirinyaga University -->
+                            <div class="education-card border border-blue-200 dark:border-blue-800 rounded-lg p-6 bg-blue-50 dark:bg-blue-900/20 tilt-effect">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-blue-100 dark:bg-blue-900/40 p-3 rounded-lg">
+                                        <i class="fas fa-university text-blue-600 dark:text-blue-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200">Bachelor of Science in Software Engineering</h3>
+                                        <p class="text-blue-600 dark:text-blue-400 font-medium">Kirinyaga University</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Currently pursuing • Expected 2025</p>
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded text-xs">Software Design</span>
+                                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded text-xs">Algorithms</span>
+                                            <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded text-xs">Project Management</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- University of the People -->
+                            <div class="education-card border border-green-200 dark:border-green-800 rounded-lg p-6 bg-green-50 dark:bg-green-900/20 tilt-effect">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-green-100 dark:bg-green-900/40 p-3 rounded-lg">
+                                        <i class="fas fa-globe text-green-600 dark:text-green-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200">Bachelor of Science in Computer Science</h3>
+                                        <p class="text-green-600 dark:text-green-400 font-medium">University of the People</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Undergraduate • Online Studies</p>
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded text-xs">Data Structures</span>
+                                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded text-xs">Networking</span>
+                                            <span class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded text-xs">Security</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- PLP Community -->
+                            <div class="education-card border border-orange-200 dark:border-orange-800 rounded-lg p-6 bg-orange-50 dark:bg-orange-900/20 tilt-effect">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-orange-100 dark:bg-orange-900/40 p-3 rounded-lg">
+                                        <i class="fas fa-users text-orange-600 dark:text-orange-400 text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg text-gray-800 dark:text-gray-200">Professional Development Program</h3>
+                                        <p class="text-orange-600 dark:text-orange-400 font-medium">PLP Community</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Currently pursuing • Software Development Track</p>
+                                        <div class="mt-3 flex flex-wrap gap-2">
+                                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded text-xs">Agile Methodologies</span>
+                                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded text-xs">DevOps</span>
+                                            <span class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200 rounded text-xs">CI/CD</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="about-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-4">
+                        <h2 class="text-2xl font-semibold mb-6 flex items-center">
+                            <div class="bg-yellow-100 dark:bg-yellow-900/30 p-3 rounded-lg mr-4">
+                                <i class="fas fa-certificate text-yellow-600 dark:text-yellow-400 about-icon"></i>
+                            </div>
+                            Certifications
+                        </h2>
+                        
+                        <div class="certificate-card bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-800 tilt-effect" onclick="openCertificateModal('images/sololearn.jpg')">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-yellow-100 dark:bg-yellow-900/40 p-3 rounded-lg">
+                                        <i class="fab fa-python text-yellow-600 dark:text-yellow-400 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-xl text-gray-800 dark:text-gray-200">Python 3 Certificate</h3>
+                                        <p class="text-gray-600 dark:text-gray-400">SoloLearn • 2023</p>
+                                    </div>
+                                </div>
+                                <button onclick="openCertificateModal('images/sololearn.jpg'); event.stopPropagation();" class="px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-600">
+                                    <span class="text-sm text-gray-600 dark:text-gray-400">View Certificate</span>
+                                </button>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Comprehensive Python programming course covering core concepts, data structures, and practical applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">My <span class="gradient-text">Focus Areas</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Specialized areas where I'm constantly learning and building expertise.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="focus-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-1">
+                    <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-6 focus-icon-bg">
+                        <i class="fab fa-python text-blue-600 dark:text-blue-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Python Development</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Building applications, automation scripts, and web solutions with Python frameworks like Django and Flask.
+                    </p>
+                    <div class="mt-6">
+                        <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                            <span>Proficiency</span>
+                            <span>90%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="focus-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-2">
+                    <div class="w-20 h-20 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-6 focus-icon-bg">
+                        <i class="fas fa-link text-purple-600 dark:text-purple-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Blockchain Technology</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Exploring decentralized technologies, smart contracts, and Web3 development on Ethereum.
+                    </p>
+                    <div class="mt-6">
+                        <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                            <span>Proficiency</span>
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="focus-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-3">
+                    <div class="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-6 focus-icon-bg">
+                        <i class="fas fa-database text-green-600 dark:text-green-400 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Database Administration</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Learning database management, SQL optimization, and DBA best practices with MySQL and PostgreSQL.
+                    </p>
+                    <div class="mt-6">
+                        <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                            <span>Proficiency</span>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Jayson Kung'u Kiarie</span>
+                    <p class="mt-2 text-gray-400">Software Engineering Student & Developer</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="about.html" class="text-white">About</a>
+                    <a href="skills.html" class="text-gray-400 hover:text-white transition">Skills</a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Jayson Kung'u Kiarie. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <button id="footer-theme-toggle" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="https://www.linkedin.com/in/jayson-kiarie-87425b2b9" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Jay7963" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Varsho254" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <span class="font-bold text-lg">𝕏</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="fixed inset-0 bg-black/90 backdrop-blur-lg z-50 hidden items-center justify-center p-4 animate-fade-in">
+        <div class="relative max-w-3xl w-full mx-auto transform transition-all duration-300 scale-95 opacity-0 certificate-modal-visible">
+            <button onclick="closeCertificateModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 bg-black/50 hover:bg-black/70 rounded-full p-3 transition-all duration-300 transform hover:scale-110">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border-4 border-gradient-to-r from-yellow-500 to-orange-500">
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 p-5 text-center">
+                    <h3 class="text-white font-bold text-xl">Python 3 Certificate - SoloLearn</h3>
+                    <p class="text-yellow-100 text-sm mt-1">Achieved Excellence in Programming</p>
+                </div>
+                <div class="p-8 flex justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-900">
+                    <img id="certificateImage" src="" alt="Certificate" class="w-full h-auto rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 max-h-[70vh] object-contain">
+                </div>
+                <div class="p-4 bg-gray-100 dark:bg-gray-700 text-center">
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">Click anywhere outside the certificate to close</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/about-scripts.js"></script>
+</body>
+</html>

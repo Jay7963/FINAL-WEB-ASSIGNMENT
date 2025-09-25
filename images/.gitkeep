@@ -1,0 +1,117 @@
+# Images Directory
+
+This directory is reserved for storing image assets for the portfolio website.
+
+## Recommended Image Structure:
+
+```
+images/
+├── profile/
+│   ├── headshot.jpg           # Professional headshot for about page
+│   └── casual.jpg             # Casual photo for home page
+├── projects/
+│   ├── project1-screenshot.png
+│   ├── project2-screenshot.png
+│   └── project3-screenshot.png
+├── skills/
+│   ├── tech-icons/            # Technology logos and icons
+│   └── certifications/        # Certificate images
+└── misc/
+    ├── background.jpg         # Hero background image
+    └── logo.png              # Personal logo/brand
+```
+
+## Image Optimization Guidelines:
+
+### File Formats:
+- **JPEG** for photographs and complex images
+- **PNG** for images with transparency or simple graphics
+- **SVG** for icons and vector graphics
+- **WebP** for modern browsers (optional optimization)
+
+### Recommended Sizes:
+- **Profile photos**: 400x400px (square crop)
+- **Project screenshots**: 1200x800px (3:2 aspect ratio)
+- **Hero backgrounds**: 1920x1080px (16:9 aspect ratio)
+- **Icons**: 64x64px or vector (SVG)
+
+### Optimization:
+- Compress images to reduce file size
+- Use appropriate quality settings (80-90% for JPEG)
+- Consider lazy loading for performance
+- Provide alt text for accessibility
+
+## Usage in HTML:
+
+```html
+<!-- Profile image example -->
+<img src="images/profile/headshot.jpg" 
+     alt="Jayson - Professional headshot" 
+     class="w-32 h-32 rounded-full object-cover">
+
+<!-- Project screenshot example -->
+<img src="images/projects/project1-screenshot.png" 
+     alt="DeFi Trading Platform Screenshot" 
+     class="w-full h-48 object-cover rounded-lg">
+```
+
+## Current Status:
+This directory currently contains placeholder content. Add your actual images following the structure above to enhance the visual presentation of your portfolio.# Images Directory
+
+This directory is reserved for storing image assets for the portfolio website.
+
+## Recommended Image Structure:
+
+```
+images/
+├── profile/
+│   ├── headshot.jpg           # Professional headshot for about page
+│   └── casual.jpg             # Casual photo for home page
+├── projects/
+│   ├── project1-screenshot.png
+│   ├── project2-screenshot.png
+│   └── project3-screenshot.png
+├── skills/
+│   ├── tech-icons/            # Technology logos and icons
+│   └── certifications/        # Certificate images
+└── misc/
+    ├── background.jpg         # Hero background image
+    └── logo.png              # Personal logo/brand
+```
+
+## Image Optimization Guidelines:
+
+### File Formats:
+- **JPEG** for photographs and complex images
+- **PNG** for images with transparency or simple graphics
+- **SVG** for icons and vector graphics
+- **WebP** for modern browsers (optional optimization)
+
+### Recommended Sizes:
+- **Profile photos**: 400x400px (square crop)
+- **Project screenshots**: 1200x800px (3:2 aspect ratio)
+- **Hero backgrounds**: 1920x1080px (16:9 aspect ratio)
+- **Icons**: 64x64px or vector (SVG)
+
+### Optimization:
+- Compress images to reduce file size
+- Use appropriate quality settings (80-90% for JPEG)
+- Consider lazy loading for performance
+- Provide alt text for accessibility
+
+## Usage in HTML:
+
+```html
+<!-- Profile image example -->
+<img src="images/profile/headshot.jpg" 
+     alt="Jayson - Professional headshot" 
+     class="w-32 h-32 rounded-full object-cover">
+
+<!-- Project screenshot example -->
+<img src="images/projects/project1-screenshot.png" 
+     alt="DeFi Trading Platform Screenshot" 
+     class="w-full h-48 object-cover rounded-lg">
+```
+
+## Current Status:
+This directory currently contains placeholder content. Add your actual images following the structure above to enhance the visual presentation of your portfolio.

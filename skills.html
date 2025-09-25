@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Skills - Jayson Kung'u Kiarie's expertise in Python, Blockchain, Web Development, and Database Management">
+    <title>Skills | Jayson Kung'u Kiarie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/skills-styles.css">
+    <script src="js/tailwind-config.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50 dark:bg-gray-800/80">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Jayson K.</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Home</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">About</a>
+                    <a href="skills.html" class="nav-link text-blue-600 dark:text-blue-400">Skills</a>
+                    <a href="projects.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Projects</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">About</a>
+                <a href="skills.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-gray-100 dark:text-blue-400 dark:bg-gray-700">Skills</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700">Contact</a>
+                <div class="px-3 py-2">
+                    <button id="mobile-theme-toggle" class="flex items-center text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-moon dark:hidden mr-2"></i>
+                        <i class="fas fa-sun hidden dark:block mr-2"></i>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Hero Section -->
+    <section class="pt-24 pb-12 page-transition">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    My <span class="gradient-text">Skills</span>
+                </h1>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    A comprehensive overview of my technical expertise and the tools I use to build innovative solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-8 mt-10">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <div class="counter" id="skillCounter">15+</div>
+                        <p class="text-gray-600 dark:text-gray-300">Technical Skills</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <div class="counter" id="toolCounter">10+</div>
+                        <p class="text-gray-600 dark:text-gray-300">Tools & Technologies</p>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+                        <div class="counter" id="yearCounter">2+</div>
+                        <p class="text-gray-600 dark:text-gray-300">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Skills -->
+                <div class="skill-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-1">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full mr-4">
+                            <i class="fas fa-code text-blue-600 dark:text-blue-400 text-xl skill-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-semibold">Programming</h2>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">Python</span>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="90%" style="--target-width: 90%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Django, Flask, FastAPI, Data Analysis</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">JavaScript</span>
+                                <span class="text-purple-600 dark:text-purple-400 font-semibold">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="75%" style="--target-width: 75%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">ES6+, DOM Manipulation, Async/Await</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">HTML/CSS</span>
+                                <span class="text-green-600 dark:text-green-400 font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="85%" style="--target-width: 85%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Responsive Design, Flexbox, Grid</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">SQL</span>
+                                <span class="text-indigo-600 dark:text-indigo-400 font-semibold">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-indigo-500 to-indigo-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="70%" style="--target-width: 70%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">MySQL, PostgreSQL, Query Optimization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain & Web3 -->
+                <div class="skill-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-2">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 dark:bg-purple-900/30 p-3 rounded-full mr-4">
+                            <i class="fas fa-link text-purple-600 dark:text-purple-400 text-xl skill-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-semibold">Blockchain & Web3</h2>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">Solidity</span>
+                                <span class="text-purple-600 dark:text-purple-400 font-semibold">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="65%" style="--target-width: 65%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Smart Contracts, DeFi Protocols</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">Web3.py</span>
+                                <span class="text-blue-600 dark:text-blue-400 font-semibold">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="70%" style="--target-width: 70%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Ethereum Integration, DApp Development</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">Ethereum</span>
+                                <span class="text-indigo-600 dark:text-indigo-400 font-semibold">60%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 skill-bar-container">
+                                <div class="skill-bar bg-gradient-to-r from-indigo-500 to-indigo-600 h-3 rounded-full transition-all duration-1000 ease-out" 
+                                     data-width="60%" style="--target-width: 60%; width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Network Understanding, Gas Optimization</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-card bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-3">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 dark:bg-green-900/30 p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-green-600 dark:text-green-400 text-xl skill-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-semibold">Tools & Platforms</h2>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="tool-card text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <i class="fab fa-git-alt text-red-500 text-2xl mb-2 tool-icon"></i>
+                            <p class="font-medium">Git</p>
+                            <p class="text-xs text-gray-500">Version Control</p>
+                        </div>
+                        <div class="tool-card text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <i class="fab fa-github text-gray-800 dark:text-gray-300 text-2xl mb-2 tool-icon"></i>
+                            <p class="font-medium">GitHub</p>
+                            <p class="text-xs text-gray-500">Code Repository</p>
+                        </div>
+                        <div class="tool-card text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <i class="fas fa-code text-blue-500 text-2xl mb-2 tool-icon"></i>
+                            <p class="font-medium">VS Code</p>
+                            <p class="text-xs text-gray-500">IDE</p>
+                        </div>
+                        <div class="tool-card text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                            <i class="fas fa-database text-green-600 text-2xl mb-2 tool-icon"></i>
+                            <p class="font-medium">MySQL</p>
+                            <p class="text-xs text-gray-500">Database</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">Soft <span class="gradient-text">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Essential skills that complement my technical expertise and enable effective collaboration.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-1">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-lightbulb text-blue-600 dark:text-blue-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Problem Solving</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Analytical thinking and creative approach to breaking down complex challenges into manageable solutions.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-2">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-users text-purple-600 dark:text-purple-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Team Collaboration</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Effective communication and collaboration in diverse teams using Agile methodologies and modern tools.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-3">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-graduation-cap text-green-600 dark:text-green-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Continuous Learning</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Passionate about staying updated with technology trends and continuously expanding my skill set.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-4">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-clock text-yellow-600 dark:text-yellow-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Time Management</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Balancing multiple projects and deadlines while maintaining quality and attention to detail.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-5">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-rocket text-red-600 dark:text-red-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Adaptability</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Quick to adapt to new technologies, frameworks, and changing project requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="soft-skill-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg tilt-effect animate-fade-in delay-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4 skill-icon-bg">
+                            <i class="fas fa-comments text-indigo-600 dark:text-indigo-400 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Communication</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            Clear technical communication with both technical and non-technical stakeholders.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill Progress Visualization -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">Skill <span class="gradient-text">Distribution</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-2xl mx-auto">
+                    Visual representation of my technical skill distribution across different domains.
+                </p>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 animate-fade-in delay-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <canvas id="skillsChart" width="400" height="400"></canvas>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-6">Technical Expertise Overview</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            My skills span across multiple domains with a strong focus on blockchain development, 
+                            web technologies, and data science. I continuously expand my knowledge to stay current 
+                            with industry trends.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full mr-3"></div>
+                                <span>Programming & Scripting</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-purple-500 rounded-full mr-3"></div>
+                                <span>Blockchain & Web3</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                                <span>Web Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-4 h-4 bg-indigo-500 rounded-full mr-3"></div>
+                                <span>Data Science & Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Jayson Kung'u Kiarie</span>
+                    <p class="mt-2 text-gray-400">Software Engineering Student & Developer</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition">About</a>
+                    <a href="skills.html" class="text-white">Skills</a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Jayson Kung'u Kiarie. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <button id="footer-theme-toggle" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="https://www.linkedin.com/in/jayson-kiarie-87425b2b9" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Jay7963" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://x.com/Varsho254" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <span class="font-bold text-lg">𝕏</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/skills-scripts.js"></script>
+</body>
+</html>

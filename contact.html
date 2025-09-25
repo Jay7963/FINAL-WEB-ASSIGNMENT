@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jayson Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/contact-styles.css">
+    <script src="js/tailwind-config.js"></script>
+    <script>
+        // Apply theme immediately to prevent flash of incorrect theme
+        (function() {
+            const savedTheme = localStorage.getItem('darkMode');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'true' || (savedTheme === null && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 fixed w-full z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold gradient-text animate-pulse">Jayson K.</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="about.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="skills.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="projects.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="contact.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium bg-primary text-white transform scale-105">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle & Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 transform hover:rotate-12">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                    
+                    <div class="md:hidden">
+                        <button id="mobile-menu-btn" class="p-2 rounded-md text-gray-600 dark:text-gray-300 transform hover:scale-110 transition-transform">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link">Home</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link">About</a>
+                <a href="skills.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link">Skills</a>
+                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link">Projects</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium nav-link bg-primary text-white">Contact</a>
+                <div class="px-3 py-2">
+                    <button id="mobile-theme-toggle" class="flex items-center text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-moon dark:hidden mr-2"></i>
+                        <i class="fas fa-sun hidden dark:block mr-2"></i>
+                        Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="py-20 hero-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in-up">
+                    Get In <span class="gradient-text">Touch</span>
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 fade-in-up" style="animation-delay: 0.2s;">
+                    Ready to collaborate on your next project? I'd love to hear from you. 
+                    Let's discuss how we can bring your ideas to life.
+                </p>
+                <div class="fade-in-up" style="animation-delay: 0.4s;">
+                    <a href="#contact-form" class="inline-block bg-gradient-to-r from-primary to-secondary text-white py-3 px-8 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-paper-plane mr-2"></i>Send Message
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Let's Connect</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+                        I'm always excited to discuss new opportunities and innovative projects.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Information -->
+                    <div class="space-y-8">
+                        <div class="fade-in-up">
+                            <p class="text-gray-600 dark:text-gray-300 text-lg mb-8">
+                                Whether you're looking for blockchain development, web applications, or data science solutions, 
+                                I'm here to help bring your vision to life with cutting-edge technology.
+                            </p>
+                        </div>
+
+                        <!-- Contact Methods -->
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Email</h3>
+                                    <a href="mailto:jayson7963@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">jayson7963@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-linkedin text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">LinkedIn</h3>
+                                    <a href="https://www.linkedin.com/in/jayson-kiarie-87425b2b9" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">linkedin.com/in/jayson-kiarie</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-gray-800 dark:bg-white rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-github text-white dark:text-gray-800"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">GitHub</h3>
+                                    <a href="https://github.com/Jay7963" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">github.com/Jay7963</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-discord text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Discord</h3>
+                                    <a href="https://discord.com/users/jayson_38683" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">jayson_38683</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-whatsapp text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">WhatsApp</h3>
+                                    <a href="https://wa.me/254793642867" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">+254 793 642 867</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-blue-400 rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Twitter</h3>
+                                    <a href="https://x.com/Varsho254" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">@Varsho254</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-tiktok text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">TikTok</h3>
+                                    <a href="https://www.tiktok.com/@just_kiarie" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">@just_kiarie</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Instagram</h3>
+                                    <a href="https://www.instagram.com/just_kiarie/" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">@just_kiarie</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 contact-method">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center transform hover:rotate-12">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold">Location</h3>
+                                    <p class="text-gray-600 dark:text-gray-300">Available for Remote Work</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg text-white quick-response-card">
+                            <h3 class="text-lg font-semibold mb-2">Quick Response</h3>
+                            <p class="text-blue-100">
+                                I typically respond to messages within 24 hours. For urgent inquiries, 
+                                feel free to reach out on multiple platforms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl fade-in-up">
+                        <h2 class="text-2xl font-bold mb-6 section-title">Send a Message</h2>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium mb-2">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 form-input">
+                                    <span class="error-message text-red-500 text-sm hidden"></span>
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium mb-2">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required 
+                                           class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 form-input">
+                                    <span class="error-message text-red-500 text-sm hidden"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 form-input">
+                                <span class="error-message text-red-500 text-sm hidden"></span>
+                            </div>
+
+                            <div>
+                                <label for="company" class="block text-sm font-medium mb-2">Company/Organization</label>
+                                <input type="text" id="company" name="company" 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 form-input">
+                            </div>
+
+                            <div>
+                                <label for="projectType" class="block text-sm font-medium mb-2">Project Type *</label>
+                                <select id="projectType" name="projectType" required 
+                                        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 form-input">
+                                    <option value="">Select a project type</option>
+                                    <option value="blockchain">Blockchain Development</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="data-science">Data Science</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="error-message text-red-500 text-sm hidden"></span>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message *</label>
+                                <textarea id="message" name="message" rows="6" required 
+                                          placeholder="Tell me about your project, timeline, and any specific requirements..."
+                                          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white dark:bg-gray-700 transition-all duration-200 resize-none form-input"></textarea>
+                                <span class="error-message text-red-500 text-sm hidden"></span>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input type="checkbox" id="privacy" name="privacy" required 
+                                       class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+                                <label for="privacy" class="ml-2 block text-sm text-gray-600 dark:text-gray-300">
+                                    I agree to the <a href="#" class="text-primary hover:text-secondary">privacy policy</a> and terms of service *
+                                </label>
+                            </div>
+
+                            <button type="submit" 
+                                    class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 px-6 rounded-lg font-semibold transition-all duration-200 focus:ring-4 focus:ring-primary/50 submit-btn">
+                                <span class="button-text">Send Message</span>
+                                <span class="loading-text hidden">
+                                    <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
+                                </span>
+                            </button>
+
+                            <div id="form-message" class="hidden p-4 rounded-lg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold section-title">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mt-4">
+                        Quick answers to common questions about working with me.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What's your typical project timeline?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            Project timelines vary based on complexity and scope. Simple web applications typically take 2-4 weeks, 
+                            while complex blockchain projects can take 2-3 months. I provide detailed timelines during our initial consultation.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.1s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">Do you work with international clients?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            Absolutely! I work with clients worldwide and am experienced in remote collaboration. 
+                            I'm flexible with time zones and communication preferences to ensure smooth project delivery.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.2s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What technologies do you specialize in?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            I specialize in blockchain development (Solidity, Web3), full-stack web development 
+                            (React, Node.js, Python), and data science (Python, ML/AI). Check out my skills page for a complete overview.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.3s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">How do you handle project payments?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            I typically work with milestone-based payments for larger projects, with 50% upfront and the remainder 
+                            upon completion. For smaller projects, payment can be made upfront. I accept various payment methods including crypto.
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.4s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">Do you provide post-launch support?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            Yes! I provide 30 days of free support after project delivery for bug fixes and minor adjustments. 
+                            Extended support and maintenance packages are also available for ongoing projects.
+                        </div>
+                    </div>
+                    
+                    <!-- New FAQ Items -->
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.5s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What is your development process like?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            My development process follows an agile methodology with regular check-ins and milestone reviews. 
+                            I begin with requirements gathering, followed by design, development, testing, and deployment. 
+                            Throughout the project, you'll have access to regular updates and can provide feedback at each stage.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.6s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">Can you work with my existing team?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            Yes, I'm experienced in integrating with existing development teams and can adapt to your team's 
+                            workflow and tools. I'm comfortable with various project management tools like Jira, Trello, and Asana, 
+                            and can participate in daily standups, code reviews, and sprint planning.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item bg-white dark:bg-gray-900 p-6 rounded-lg shadow-sm fade-in-up" style="animation-delay: 0.7s;">
+                        <button class="faq-question w-full text-left flex justify-between items-center">
+                            <h3 class="text-lg font-semibold">What kind of projects do you enjoy working on the most?</h3>
+                            <i class="fas fa-chevron-down transition-transform duration-200"></i>
+                        </button>
+                        <div class="faq-answer hidden mt-4 text-gray-600 dark:text-gray-300">
+                            I'm passionate about projects that solve real-world problems and have a positive impact. 
+                            I particularly enjoy working on blockchain applications that promote decentralization, 
+                            web applications that improve user experiences, and data science projects that uncover valuable insights.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4 gradient-text">Jayson K.</h3>
+                    <p class="text-gray-400 mb-4">
+                        Passionate blockchain developer and full-stack engineer creating innovative solutions 
+                        for the decentralized web.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/Jay7963" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jayson-kiarie-87425b2b9" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/Varsho254" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://discord.com/users/jayson_38683" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-discord text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/just_kiarie/" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@just_kiarie" target="_blank" class="text-gray-400 hover:text-white transition-colors social-icon">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors transform hover:translate-x-2 inline-block">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors transform hover:translate-x-2 inline-block">About</a></li>
+                        <li><a href="skills.html" class="text-gray-400 hover:text-white transition-colors transform hover:translate-x-2 inline-block">Skills</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition-colors transform hover:translate-x-2 inline-block">Projects</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors transform hover:translate-x-2 inline-block">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-400 transform hover:translate-x-2 inline-block hover:text-white transition-colors">Smart Contract Development</span></li>
+                        <li><span class="text-gray-400 transform hover:translate-x-2 inline-block hover:text-white transition-colors">DApp Development</span></li>
+                        <li><span class="text-gray-400 transform hover:translate-x-2 inline-block hover:text-white transition-colors">Web Development</span></li>
+                        <li><span class="text-gray-400 transform hover:translate-x-2 inline-block hover:text-white transition-colors">Data Science Consulting</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Jayson Portfolio. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-4">
+                    <button id="footer-theme-toggle" class="text-gray-400 hover:text-white transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="https://github.com/Jay7963" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jayson-kiarie-87425b2b9" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/Varsho254" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <span class="font-bold text-lg">𝕏</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-scripts.js"></script>
+</body>
+</html>
