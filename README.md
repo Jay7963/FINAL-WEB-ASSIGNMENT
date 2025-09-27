@@ -36,33 +36,7 @@ portfolio/
 - **Vanilla JavaScript (ES6+)** - Modern JavaScript with classes
 - **Font Awesome** - Icon library
 
-## 🚀 Getting Started
+## 🚀 Live Demo
 
-1. Clone or download this repository
-2. Navigate to the project directory
-3. Open index.html in your browser, or serve locally:
+Check out the live website: [https://jayporfolio.netlify.app/projects]
 
-```bash
-# Python
-python -m http.server 8000
-
-# Node.js
-npx http-server .
-
-# PHP
-php -S localhost:8000
-```
-
-4. Open your browser at `http://localhost:8000`
-
-## 📞 Contact
-
-For questions about this project:
-
-- **Email**: jayson.developer@example.com
-- **LinkedIn**: linkedin.com/in/jayson-dev
-- **GitHub**: github.com/jayson-dev
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
